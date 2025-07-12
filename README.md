@@ -2,7 +2,12 @@
 
 ### 1. Build and Run
 ```bash
-    ./ci-cd.sh
+./ci-cd.sh
+```
+OR
+```bash
+mvn clean package
+java -jar target/transporter-on-lanes-1.0.0.jar
 ```
 
 ### 2. Test the endpoints
@@ -54,7 +59,7 @@ response:
 
 #### 2.2 Request assignment: 
 
-Success Scenario: 
+##### Success Scenario: 
 ```bash
     curl -X POST "http://localhost:8080/api/v1/transporters/assignment" -H \ 
     "Content-type: application/json" -d '
@@ -119,7 +124,7 @@ response:
     }
 ```
 
-Fail Scenario: 
+##### Fail Scenario: 
 ```bash
     curl -X POST "http://localhost:8080/api/v1/transporters/assignment" -H \ 
     "Content-type: application/json" -d '
